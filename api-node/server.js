@@ -4,6 +4,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 
 const authRoutes = require("./routes/auth");
+const messagesRoutes = require("./routes/message");
 
 const PORT = 3000;
 const app = express();
@@ -14,6 +15,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use("/", authRoutes);
+app.use("/messages", messagesRoutes);
 
 app.listen(PORT, function () {
   console.log("Server running on localhost:" + PORT);
