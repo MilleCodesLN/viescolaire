@@ -15,8 +15,8 @@ export class MessageService {
     private http: HttpClient
   ) { }
 
-  getMessages(): Observable<Message> {
-    return this.http.get<Message>(this.url + "/messages");
+  getMessages(): Observable<Message[]> {
+    return this.http.get<Message[]>(this.url + "/messages");
   }
 
 }
