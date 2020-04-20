@@ -16,6 +16,10 @@ const Message = db.define("messages", {
     underscored: true,
     //   freezeTableName: true,
     //   tableName: "users",
+    createdAt: 'created_at',
+    updatedAt: 'updated_at',
+    tableName: 'messages'
+
 });
 
 module.exports = Message;

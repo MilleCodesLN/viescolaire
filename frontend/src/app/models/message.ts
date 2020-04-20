@@ -2,7 +2,7 @@ import { Timestamp } from 'rxjs';
 
 export interface Message {
     id: Number;
-    message: String;
+    messages: String;
     user_id: Number,
     created_at: Date;
     updated_at: Date;

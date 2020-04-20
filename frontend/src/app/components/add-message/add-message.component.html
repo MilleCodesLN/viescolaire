@@ -1,0 +1,13 @@
+<div class="row">
+    <div>
+        <h2>Ecrire un nouveau message</h2>
+        <form>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea [(ngModel)]="message.messages" name="message" cols="30" rows="5"></textarea>
+            </div>
+            <button class="btn btn-success" (click)="saveMessage()" type="submit">Soumettre</button>
+        </form>
+
+    </div>
+</div>

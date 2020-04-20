@@ -1,4 +1,33 @@
-<h1>Messages</h1>
-<div *ngFor="let message of messages">
-    <h5>{{message.messages}}</h5>
+<div class="container">
+
+    <div class="row">
+
+        <h1>Liste des Messages</h1><br>
+        <!-- <div *ngFor="let message of messages">
+                 <h5>{{message.messages}}</h5>
+            </div> -->
+
+        <li *ngFor="let message of messages" class="list-group-item">
+            <h4>Message : {{ message.messages }}</h4>
+            <p>{{message.created_at | date:'dd/MM/y'}}</p>
+        </li>
+        <br>
+    </div>
+    <app-add-message></app-add-message>
+
+
+    <!-- 
+    <div class="row">
+        <div>
+            <h2>Ecrire un nouveau message</h2>
+            <form>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" name="message" id="message" cols="30" rows="5"></textarea>
+                </div>
+                <button class="btn btn-success" type="submit">Soumettre</button>
+            </form>
+             (click)="save()"
+</div>
+</div> -->
 </div>
